@@ -1,0 +1,2 @@
+1. package.json is the configuration file for npm.
+2. Bundler basically bundles our App so thatit can be shipped to production.
