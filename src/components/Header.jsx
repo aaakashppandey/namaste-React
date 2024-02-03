@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import food_logo from "../assets/foodlogo.png";
+// import food_logo from "../assets/foodlogo.png";
+import { LOGO_URL } from "../utils/constants";
 import useOnlineStatus from "../customHooks/useOnlineStatus";
 import { useContext } from "react";
 import UserContext from "../customHooks/UserContext";
@@ -15,7 +16,7 @@ const Header = () => {
   return (
     <div className="flex justify-between bg-pink-100 shadow-lg">
       <div className="logo-container">
-        <img className="w-24" src={food_logo} alt="food logo" />
+        <img className="w-24" src={LOGO_URL} alt="food logo" />
       </div>
       <div className="flex items-center">
         <ul className="flex p-4 m-4">
@@ -27,6 +28,9 @@ const Header = () => {
           </li>
           <li className="px-4">
             <Link to="/about">About</Link>
+          </li>
+          <li className="px-4">
+            <Link to="/contactus">Contact</Link>
           </li>
           <li className="px-4">
             <Link to="/cart">Cart-{cartItems.length} items</Link>

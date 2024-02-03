@@ -9,6 +9,7 @@ import UserContext from "./customHooks/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
+import Contact from "./components/Contact";
 const AppLayout = () => {
   const [userName, setUserName] = useState();
   useEffect(() => {
@@ -53,6 +54,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:resId",
         element: <Restaurantpage />,
+      },
+      {
+        path: "/contactUs",
+        element: <Contact/>,
       },
       {
         path: "/cart",
